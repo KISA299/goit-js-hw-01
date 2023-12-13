@@ -1,11 +1,13 @@
-function calculateEvenSum(n) {
-  let sum = 0;
-  for (let i = 1; i <= n; i++) {
-    if (i % 2 === 0) {
-      sum += i;
-    }
-  }
+function getElementWidth(content, padding, border) {
+  const widthValue = parseFloat(content);
+  const paddingValue = parseFloat(padding);
+  const borderValue = parseFloat(border);
 
-  return sum;
+  const elementWidth = widthValue + 2 * (paddingValue + borderValue);
+
+  return elementWidth;
 }
-console.log(calculateEvenSum(6));
+
+console.log(getElementWidth("50px", "8px", "4px"));
+console.log(getElementWidth("60px", "12px", "8.5px"));
+console.log(getElementWidth("200px", "0px", "0px"));
